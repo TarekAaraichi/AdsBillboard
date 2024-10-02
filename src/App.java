@@ -44,4 +44,9 @@ public class App {
         
                 
     }
+
+    public Object setVisible(boolean b) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'setVisible'");
+    }
 }
