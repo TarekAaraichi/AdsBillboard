@@ -30,7 +30,7 @@ public class Message {
     }
 
         // Constractor + Arguments
-        public Message(String customer) {
+        public Message(String customer, String text, Float fee) {
         
             // Call in setters for initialization of the attributes
             this.setCustomer(customer);
