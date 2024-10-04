@@ -1,5 +1,5 @@
 // Class
-public class Message {
+public class Advertisements {
     
     // Attributes
     private String customer;
@@ -30,7 +30,7 @@ public class Message {
     }
 
         // Constractor + Arguments
-        public Message(String customer, String text, Float fee) {
+        public Advertisements(String customer, String text, Float fee) {
         
             // Call in setters for initialization of the attributes
             this.setCustomer(customer);

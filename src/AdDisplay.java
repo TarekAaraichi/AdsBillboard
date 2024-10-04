@@ -16,25 +16,25 @@ public class AdDisplay implements ActionListener {
     private JFrame frame = new JFrame();
     private JLabel firstLine, secondLine;
     private Timer timer;
-    private ArrayList<Message> list;
+    private ArrayList<Advertisements> list;
     private Random rnd;
     private int index;
 
     // Void function to set up and start the billboard
-    public void display(ArrayList<Message> msgs){
+    public void display(ArrayList<Advertisements> ads){
 
         // Assigns the value of the parameter "msgs" to the instance variable "list" of the current object.
-        this.list = msgs; 
+        this.list = ads; 
         rnd = new Random();
-        index = rnd.nextInt(msgs.size()); // Generates a random index
+        index = rnd.nextInt(ads.size()); // Generates a random index
         
         // Set up the frame
-        frame.setTitle("Billboard");
+        frame.setTitle("Group 7: Ads Billboard");
         frame.setSize(400, 300);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         // Set up the label 1
-        firstLine = new JLabel(msgs.get(index).getText());
+        firstLine = new JLabel(ads.get(index).getText());
 
         firstLine.setForeground(Color.CYAN); // Text color
         firstLine.setBackground(Color.BLACK); // Background color
@@ -47,7 +47,7 @@ public class AdDisplay implements ActionListener {
         frame.add(firstLine); // Add label to the frame
 
         // Set up label 2
-        secondLine = new JLabel(msgs.get(index).getCustomer());
+        secondLine = new JLabel(ads.get(index).getCustomer());
 
         secondLine.setForeground(Color.ORANGE);
         secondLine.setBackground(Color.BLACK);
@@ -59,8 +59,8 @@ public class AdDisplay implements ActionListener {
 
         frame.add(secondLine);
 
-        // Set up the timer to switch messages every 10 seconds
-        timer = new Timer(10*1000, this);
+        // Set up the timer to switch messages every 5 seconds
+        timer = new Timer(5*1000, this);
         timer.setInitialDelay(0); // Starts immediately
         timer.start();
 
