@@ -1,10 +1,10 @@
-// Class
+
 public class Advertisements {
     
-    // Attributes
-    private String customer;
-    private String text;
-    private Float fee;
+    // Declares this Class Attributes
+    private String customer; // Customer name
+    private String ad; // Customer advertisement
+    private Float fee; // Advertisement paid fee
         
 
     // Getters & Setters
@@ -16,28 +16,27 @@ public class Advertisements {
     }
 
     public String getText() {
-        return text;
+        return ad;
     }
     public void setText(String text) {
-        this.text = text;
+        this.ad = text;
     }
     
     public Float getFee() {
         return fee;
     }
+    
     public void setFee(Float fee) {
         this.fee = fee;
     }
 
         // Constractor + Arguments
-        public Advertisements(String customer, String text, Float fee) {
+        public Advertisements(String customer, String ad, Float fee) {
         
-            // Call in setters for initialization of the attributes
+            // Calls in setters for the initialization of the attributes
             this.setCustomer(customer);
-            this.setText(text);
+            this.setText(ad);
             this.setFee(fee);
         }
-
-
 
 }
