@@ -12,7 +12,6 @@ public class App {
         advertisements.add(new Advertisements("Farmor Ankas Pajer AB", "Skynda innan Mårten äter allt!", 2000F));
         advertisements.add(new Advertisements("Svarte Petters Svartbyggen", "Bygga svart? Ring Petter", 1500F));
         advertisements.add(new Advertisements("Långbens Detektivbyrå", "Mysterier? Ring Långben", 4000F));
-
         
         // // Creates instances of the "Advertisements" class with Ad text, customer name, and paid fee
         // Advertisements ad1 = new Advertisements("Hederliga Harrys bilar", "En bra biläffar (för Harry)", 5000F);

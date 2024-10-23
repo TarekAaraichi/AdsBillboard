@@ -30,13 +30,13 @@ public class Advertisements {
         this.fee = fee;
     }
 
-        // Constractor + Arguments
-        public Advertisements(String customer, String ad, Float fee) {
-        
-            // Calls in setters for the initialization of the attributes
-            this.setCustomer(customer);
-            this.setText(ad);
-            this.setFee(fee);
-        }
+    // Constractor + Arguments
+    public Advertisements(String customer, String ad, Float fee) {
+    
+        // Calls in setters for the initialization of the attributes
+        this.setCustomer(customer);
+        this.setText(ad);
+        this.setFee(fee);
+    }
 
 }

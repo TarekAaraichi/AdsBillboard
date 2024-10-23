@@ -6,7 +6,6 @@ import java.awt.event.ActionListener;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Random;
-
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
@@ -54,6 +53,7 @@ public class AdDisplay implements ActionListener {
         frame.setTitle("Ads Billboard");
         frame.setSize(400, 300);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setResizable(false);
 
         // Configure the first label to display the ad text
         firstLine = new JLabel(list.get(index).getText());
@@ -93,7 +93,6 @@ public class AdDisplay implements ActionListener {
         //index = rnd.nextInt(this.list.size());
         //firstLine.setText(this.list.get(index).getText());
         //secondLine.setText(this.list.get(index).getCustomer());
-
 
     // Method to select a random index based on the fee paid by each customer (weighted selection)
     private int getRandomIndex() {
