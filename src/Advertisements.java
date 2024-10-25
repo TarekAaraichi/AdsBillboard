@@ -1,11 +1,8 @@
-
 public class Advertisements {
-    
     // Declares this Class Attributes
     private String customer; // Customer name
     private String ad; // Customer advertisement
-    private Float fee; // Advertisement paid fee
-        
+    private Float fee; // Advertisement paid fee  
 
     // Getters & Setters
     public String getCustomer() {
@@ -32,11 +29,9 @@ public class Advertisements {
 
     // Constractor + Arguments
     public Advertisements(String customer, String ad, Float fee) {
-    
         // Calls in setters for the initialization of the attributes
         this.setCustomer(customer);
         this.setText(ad);
         this.setFee(fee);
     }
-
 }

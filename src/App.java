@@ -1,4 +1,3 @@
-
 import java.util.ArrayList;  // Importing ArrayList to create dynamic lists.
 
 public class App {
