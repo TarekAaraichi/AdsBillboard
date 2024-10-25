@@ -1,4 +1,4 @@
-public class Advertisements {
+public class Advertisement {
     // Declares this Class Attributes
     private String customer; // Customer name
     private String ad; // Customer advertisement
@@ -28,7 +28,7 @@ public class Advertisements {
     }
 
     // Constractor + Arguments
-    public Advertisements(String customer, String ad, Float fee) {
+    public Advertisement(String customer, String ad, Float fee) {
         // Calls in setters for the initialization of the attributes
         this.setCustomer(customer);
         this.setText(ad);

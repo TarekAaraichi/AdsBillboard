@@ -21,7 +21,7 @@ public class AdDisplay implements ActionListener {
     private Timer timer;
     
     // List of advertisements and random generator for selecting ads
-    private ArrayList<Advertisements> list;
+    private ArrayList<Advertisement> list;
     private Random rnd;
     
     // Index for tracking current ad and array to count how often each ad is displayed
@@ -32,14 +32,14 @@ public class AdDisplay implements ActionListener {
     private long runningTime = 0;
 
     // Method to set the list of ads and initialize the display counts
-    public void setMessageList(ArrayList<Advertisements> ads) {
+    public void setMessageList(ArrayList<Advertisement> ads) {
         this.list = ads;
         // Initialize the display counter for each advertisement
         this.adDisplayCounts = new int[list.size()];  
     }
 
     // Method to configure and start the billboard display
-    public void display(ArrayList<Advertisements> ads){
+    public void display(ArrayList<Advertisement> ads){
 
         // Set the ads list for this object and initialize the counters
         this.setMessageList(ads);
@@ -97,7 +97,7 @@ public class AdDisplay implements ActionListener {
     private int getRandomIndex() {
         // Calculate the total sum of all customer fees
         int totalFees = 0;
-        for (Advertisements ads : list)
+        for (Advertisement ads : list)
             totalFees += ads.getFee();  // Add up each ad's fee
         
         // Generate a random value within the range of total fees
@@ -128,7 +128,7 @@ public class AdDisplay implements ActionListener {
         System.out.println("Ads Display Counts and Runtime Stats:");
         System.out.printf("The Program has been running for: %02d:%02d:%02d\n", hours, minutes, seconds);
         for (int i = 0; i < list.size(); i++) {
-            Advertisements ad = list.get(i);
+            Advertisement ad = list.get(i);
             System.out.println("    - " + ad.getCustomer() + ": Ad Displayed " + adDisplayCounts[i] + " times.");
         }
         System.out.println("-----------------------------------------------------------------");
@@ -141,7 +141,7 @@ public class AdDisplay implements ActionListener {
             this.ClearConsole();  // Clear the console for a clean display
             int index = getRandomIndex();  // Select a random ad based on fees
             adDisplayCounts[index]++;  // Increment the display counter for the selected ad
-            Advertisements ad = list.get(index);  // Get the selected ad
+            Advertisement ad = list.get(index);  // Get the selected ad
 
             // Update the labels with the new ad text and customer name
             firstLine.setText(ad.getText());

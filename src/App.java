@@ -4,13 +4,13 @@ public class App {
     public static void main(String[] args) throws Exception {
 
         // Creates a list of advertisements using ArrayList
-        ArrayList<Advertisements> advertisements = new ArrayList<>();
+        ArrayList<Advertisement> advertisement = new ArrayList<>();
 
         // Adds a new Advertisement object to the advertisements list, with an Ad message, a customer name and the paid fee.
-        advertisements.add(new Advertisements("Hederliga Harrys bilar", "En bra biläffar (för Harry)", 5000F));
-        advertisements.add(new Advertisements("Farmor Ankas Pajer AB", "Skynda innan Mårten äter allt!", 2000F));
-        advertisements.add(new Advertisements("Svarte Petters Svartbyggen", "Bygga svart? Ring Petter", 1500F));
-        advertisements.add(new Advertisements("Långbens Detektivbyrå", "Mysterier? Ring Långben", 4000F));
+        advertisement.add(new Advertisement("Hederliga Harrys bilar", "En bra biläffar (för Harry)", 5000F));
+        advertisement.add(new Advertisement("Farmor Ankas Pajer AB", "Skynda innan Mårten äter allt!", 2000F));
+        advertisement.add(new Advertisement("Svarte Petters Svartbyggen", "Bygga svart? Ring Petter", 1500F));
+        advertisement.add(new Advertisement("Långbens Detektivbyrå", "Mysterier? Ring Långben", 4000F));
         
         // // Creates instances of the "Advertisements" class with Ad text, customer name, and paid fee
         // Advertisements ad1 = new Advertisements("Hederliga Harrys bilar", "En bra biläffar (för Harry)", 5000F);
@@ -28,6 +28,6 @@ public class App {
         AdDisplay billboard = new AdDisplay();
 
         // Calls the display method of AdDisplay to display the advertisements on the billboard
-        billboard.display(advertisements);        
+        billboard.display(advertisement);        
     }
 }
